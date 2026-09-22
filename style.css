@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --corPrincipal: #22D4FD;
+    --corFundo: #000000;
+    --fontTitulo: "krona One", sans-serif;
+    --fontPrincipal: "Montserrat", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(imagens/background.jpg)
+}
+
+.cabecalho {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+}
+
+.cabecalho a {
+    text-decoration: none;
+    color: var(--corPrincipal);
+    font-family: var(--fontPrincipal);
+    font-size: 1.5rem;
+
+}
+
+header {
+    padding: 20px;
+     box-shadow: inset -2px 1px 10px var(--corPrincipal); 
+    margin-top: 2px;
+    /* background-image: linear-gradient(to left, var(--corFundo), var(--corPrincipal)); */
+
+
+}
+
+.texto_apresentacao h1 {
+    font-family: var(--fontTitulo);
+    font-size: 2.0rem;
+    line-height: 1.4;
+    color: white;
+    max-height: 700 ;
+    max-width: 480;   
+}
+
+.destaque {
+    color: #22D4FD;
+}
+
+.texto_apresentacao p {
+    font-family: var(--fontPrincipal);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: white;
+    /* margin:10px; */
+    font-weight: 300;
+    max-width: 400px;
+}
+.texto_apresentacao{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.contato {
+    display: flex;
+    gap: 30px;
+    justify-content: flex-start;
+    
+
+
+}
+
+.contato a {
+    background-color: #22D4FD;
+    color: #000000;
+    font-size: 20px;
+    text-decoration: none;
+
+    border-radius: 16px;
+    border: solid 10px var(--corPrincipal);
+    padding: 0 10px 0 10px;
+    /* margin-top: 40px; */
+  
+
+}
+
+.bloco_apresentacao {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+.foto img {
+    width: 400px;
+    margin: 0 0 0 60px;
+    border:solid 3px var(--corPrincipal)
+}
+
+.rodape {
+    background-color: #22D4FD;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+    font-family: var(--fontTitulo);
+}
+
+@media(max-width:1070px) {
+
+    .bloco_apresentacao {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .texto_apresentacao{
+        align-items: center;
+        text-align: center;
+    }
+}
