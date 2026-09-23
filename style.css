@@ -19,7 +19,8 @@ body {
 
 .cabecalho {
     display: flex;
-    gap: 100px;
+    /* gap: 100px; */
+    gap: clamp(25px, 6vw, 100px);
     justify-content: center;
 }
 
@@ -95,13 +96,16 @@ header {
     display: flex;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 2vh 2vw;
+    width: 90% ;
 
 }
 
 .foto img {
-    width: 400px;
-    margin: 0 0 0 60px;
+    width: 40vw;
+    max-width: 400px;
+    /* margin: 0 0 0 60px; */
+    margin-left: clamp(20px, 5vw, 60px);
     border:solid 3px var(--corPrincipal)
 }
 
@@ -112,16 +116,92 @@ header {
     padding: 10px;
     font-size: 1rem;
     font-family: var(--fontTitulo);
+    margin-top: 45px;
+    padding-bottom:15px;
 }
-
-@media(max-width:1070px) {
+@media (max-width: 1070px) {
 
     .bloco_apresentacao {
         flex-direction: column-reverse;
         align-items: center;
+        width: 100%;
+        padding: 30px 20px;
     }
-    .texto_apresentacao{
+
+    .texto_apresentacao {
         align-items: center;
         text-align: center;
+        width: 100%;
+    }
+
+    .texto_apresentacao h1 {
+        max-width: 600px;
+    }
+
+    .texto_apresentacao p {
+        max-width: 600px;
+    }
+
+    .foto img {
+        width: min(400px, 80vw);
+        margin: 0 0 30px 0;
+    }
+
+    .contato {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    @media (max-width: 600px) {
+
+    header {
+        padding: 15px 10px;
+    }
+
+    .cabecalho {
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .cabecalho a {
+        font-size: 1.1rem;
+    }
+
+    .bloco_apresentacao {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .texto_apresentacao h1 {
+        font-size: 1.5rem;
+        max-width: 100%;
+    }
+
+    .texto_apresentacao p {
+        font-size: 0.9rem;
+        max-width: 100%;
+    }
+
+    .foto img {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 0 25px 0;
+    }
+
+    .contato {
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .contato a {
+        font-size: 16px;
+        padding: 10px 15px;
+        border: solid 5px var(--corPrincipal);
+    }
+
+    .rodape {
+        font-size: 0.8rem;
     }
 }
+}
+
